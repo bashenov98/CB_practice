@@ -17,10 +17,6 @@ class CompanySerializer(serializers.ModelSerializer):
         model = Company
         fields = '__all__'
 
-    def create(self, validated_data):
-        company = Company(**validated_data)
-        company.save()
-        return company
 
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -35,8 +31,3 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = '__all__'
-
-    def create(self, validated_data):
-        review = Review(**validated_data)
-        review.save()
-        return review
